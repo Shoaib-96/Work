@@ -1,0 +1,41 @@
+<html>
+<head>
+<style>
+
+#studentlist{
+	display:none;
+}
+</style>
+</head>
+
+<body>
+	<h1>Hello</h1>
+	<div id='profile'><p>Hello World!</p></div>
+	<div id='studentlist'><p>Hello, Student!</p></div>
+	<br>
+	<br>
+	<button id='pro' onClick='toggle_visibility(this.id)'>Profile</button>
+	<button id='stulist' onClick='toggle_visibility(this.id)'>Student List</button>
+
+<script>
+
+
+function toggle_visibility(id) {
+       var e = document.getElementById(id);
+	   if(id=='pro'){
+			e.style.display = 'block';
+			var f = document.getElementById('studentlist');
+			f.style.display = 'none';
+	   }
+	   else{
+			e.style.visibility = 'block';
+			var f = document.getElementById('profile');
+			f.style.display = 'none';
+	   }
+       
+}
+</script>
+
+</body>
+
+</html>
